@@ -46,15 +46,18 @@ int main() {
         if (pos != std::string::npos) {
             target = std::stoll(tmp_str.substr(0, pos));
 
-            std::string numbers = tmp_str.substr(pos + 1);
+            // loop version
+            // std::string numbers = tmp_str.substr(pos + 1);
+            // std::stringstream ss(numbers);
+            // long long value;
 
-            // std::cout << target << " " << numbers << '\n';
-            std::stringstream ss(numbers);
-            long long value;
+            // while(ss >> value) {
+            //     vec.push_back(value);
+            // }
 
-            while(ss >> value) {
-                vec.push_back(value);
-            }
+            // no-loop version
+            // std::istringstream iss(tmp_str.substr(pos + 1));
+            // vec.insert(vec.end(), std::istream_iterator<int>(iss), std::istream_iterator<int>());
         }
 
         if (dfs(1, vec[0])) {
