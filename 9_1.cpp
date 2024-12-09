@@ -24,13 +24,7 @@ int main() {
             }
         }
     }
-    for (int i = 0;i < vec.size();i++) {
-        if (vec[i] == -1) {
-            putchar('.');
-        }
-        else std::cout << vec[i];
-    }
-    std::cout << '\n';
+    
     int n = vec.size();
     int last_idx = n - 1;
     int first_idx = 0;
@@ -79,127 +73,13 @@ int main() {
             last_idx--;
         }
     }
-    // while(first_idx < last_idx) {
-    //     // std::swap(vec[first_idx], vec[last_idx]);
-    //     int first_size = 0;
-    //     int last_size = 0;
-    //     std::cout << "----" << first_idx << " " << last_idx << '\n';
-    //     int l = first_idx;
-    //     while(vec[l] == -1) {
-    //         l++;
-    //         // std::cout << 1 << '\n';
-    //     }
-    //     first_size = l - first_idx;
-
-    //     int r = last_idx;
-    //     while(vec[r] == vec[last_idx]) {
-    //         r--; 
-    //     };
-    //     last_size = last_idx - r;
-
-    //     if (last_size > first_size) {
-    //         last_idx = r;
-    //         while(last_idx > first_idx && vec[last_idx] == -1){
-    //             last_idx--;
-    //         };
-            
-    //         continue;
-
-    //         if (first_idx >= last_idx) {
-    //             int l = 0;
-    //             while(vec[l] != -1 && l < n) {
-    //                 l++;
-    //             }
-
-    //             first_idx = l;
-    //             // last_idx = r;
-
-    //             // if (mmap.find({first_idx, last_idx}) != mmap.end() && mmap[{first_idx, last_idx}] > 5) {
-    //             //     std::cout << first_idx << " " << last_idx << '\n';
-    //             //     std::cout << mmap[{first_idx, last_idx}] << '\n'; 
-    //             //     break;
-    //             // }
-    //             // if (mmap.find({first_idx, last_idx}) == mmap.end())mmap[{first_idx, last_idx}] = 1;
-    //             // else mmap[{first_idx, last_idx}] += 1;
-    //         }
-    //     }
-
-    //     while (first_idx < l && last_idx > r && first_idx < last_idx) {
-    //         // std::cout << "*" << first_idx << " " << last_idx << '\n';
-    //         std::swap(vec[first_idx], vec[last_idx]);
-    //         first_idx++;
-    //         last_idx--;
-    //         for (int i = 0;i < vec.size();i++) {
-    //             if (vec[i] == -1) {
-    //                 putchar('.');
-    //             }
-    //             else std::cout << vec[i];
-    //         }
-    //         std::cout << '\n';
-    //         // std::cout << "@" << first_idx << " " << last_idx << '\n';
-    //     }
-
-
-    //     // first_idx = l;
-    //     last_idx = r;
-    //     while(first_idx < last_idx && vec[first_idx] != -1){
-    //         first_idx++;
-    //     };
-    //     while(last_idx > first_idx && vec[last_idx] == -1){
-    //         last_idx--;
-    //     };
-
-    //     if (first_idx >= last_idx) {
-    //         int l = 0;
-    //         while(vec[l] != -1 && l < n) {
-    //             l++;
-    //         }
-
-    //         first_idx = l;
-    //         // if (mmap.find({first_idx, last_idx}) != mmap.end() && mmap[{first_idx, last_idx}] > 5) {
-    //         //     // std::cout << first_idx << " " << last_idx << '\n';
-    //         //     // std::cout << mmap[{first_idx, last_idx}] << '\n'; 
-    //         //     break;
-    //         // }
-    //         // if (mmap.find({first_idx, last_idx}) == mmap.end())mmap[{first_idx, last_idx}] = 1;
-    //         // else mmap[{first_idx, last_idx}] += 1;
-    //     }
-    // }
-
-    // for (int i = 0;i < 500;i++) {
-    //     if (vec[i] == -1) {
-    //         putchar('_');
-    //     }
-    //     else std::cout << vec[i];
-
-    //     std::cout << ' ';
-    // }
-    // std::cout << '\n';
-    // for (int i = vec.size() - 1;i >= vec.size() - 500;i--) {
-    //     if (vec[i] == -1) {
-    //         putchar('.');
-    //     }
-    //     else std::cout << vec[i];
-
-    //     std::cout << ' ';
-    // }
-    // std::cout << '\n';
-    
 
     long long ans = 0;
     for (long long i = 0;i < vec.size();i++) {
         if (vec[i] != -1) {
             ans += (long long)(vec[i]) * i;
-            // if (i < 500)std::cout << vec[i] << "*" << i << "=" << (vec[i]) * i<<'\n'; 
         }
-        // if (!((vec[i] == '.')) {
-        //     std::cout << i << " No" << '\n';
-        //     std::cout << vec[i] << '\n';
-        //     break;
-        // }
-        // std::cout << vec[i];
     }
-    // std::cout << '\n';
 
     std::cout << ans << '\n';
 
