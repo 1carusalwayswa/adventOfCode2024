@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <chrono>
 
 using std::cin;
 using std::cout;
@@ -39,12 +40,11 @@ int main() {
     int m = g.size() - 2;
     int n = g[0].size() - 2;
 
+    // auto start = std::chrono::high_resolution_clock::now();
     for (int i = 1;i <= m;i++) {
         for (int j = 1;j <= n;j++) {
             dp[0][i][j] = (g[i][j] == 0) ? 1 : 0;
-            std::cout << dp[0][i][j] << " ";
         }
-        std::cout << '\n';
     }
 
     for (int k = 1;k <= 9;k++) {
@@ -67,6 +67,10 @@ int main() {
             ans += dp[9][i][j];
         }
     }
+
+    // auto end = std::chrono::high_resolution_clock::now();
+    // auto elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
+    // std::cout << "Elapsed time: " << elapsed.count() << " ms\n";
     std::cout << ans << '\n';
 
     return 0;
