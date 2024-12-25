@@ -33,8 +33,6 @@ if __name__ == "__main__":
         if cnt != 0:
             p1 += 1
         p2 += cnt 
-    # print(p1 == int(puzzle.examples[0].answer_a), p1, puzzle.examples[0].answer_a)
-    # print(p2 == int(puzzle.examples[0].answer_b), p2, puzzle.examples[0].answer_b)
-    # puzzle.answer_a = p1
-    # puzzle.answer_b = p2
+    puzzle.answer_a = p1
+    puzzle.answer_b = p2
     
